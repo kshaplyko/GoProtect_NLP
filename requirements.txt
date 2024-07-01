@@ -1,7 +1,6 @@
 nlpaug==1.1.11
 pandas==2.2.2
 pandas-datareader==0.10.0
-pandas-profiling==3.6.6
 pandas-summary==0.2.0
 pandasql==0.7.3
 requests==2.32.3
