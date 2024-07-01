@@ -102,7 +102,10 @@ def main():
 
         output_df_file = st.text_input('Введите путь для сохранения файла', 'df_processed.csv')
 
-        if st.button('Сохранить файл'):
+        if st.button('Save Processed Files'):
+            output_dir = os.path.dirname(output_df_file)
+            if not os.path.exists(output_dir):
+                os.makedirs(output_dir)
             with st.spinner('Сохранение файла...'):
                 df_processed.to_csv(output_df_file, index=False)
             st.success('Файл успешно сохранен!')
